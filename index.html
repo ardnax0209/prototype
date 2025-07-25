@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FeelDX</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <button id="menu-toggle" aria-label="Open Menu">☰</button>
+    <div id="sidebar">
+        <button id="close-btn" aria-label="Close Menu">✕</button>
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#value">Value Proposition</a></li>
+            <li><a href="#work">Case Study</a></li>
+            <li><a href="#recognitions">Testimonials</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+    <div>
+        <img src="resources/FeelDX_Logo_1.jpg" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#value">Value Proposition</a></li>
+        <li><a href="#work">Case Study</a></li>
+        <li><a href="#recognitions">Testimonials</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero-section">
+        <div class="hero-content">
+          <h1>Building the Future of Infrastructure</h1>
+          <button class="cta-button" onclick="contactUs()">Get In Touch</button>
+        </div>
+    </section>      
+    
+    <section id="services">
+        <h2>Services</h2>
+        <ul class="services-list">
+          <li>
+            <img src="resources/blueprint.png" alt="Planning Icon" />
+            <span>Transforming visions into functional, future-ready spaces.</span>
+          </li>
+          <li>
+            <img src="resources/checked.png" alt="Execution Icon" />
+            <span>Seamlessly executing projects from concept to completion.</span>
+          </li>
+          <li>
+            <img src="resources/dashboard.png" alt="Analytics Icon" />
+            <span>Smart technology solutions for the modern built environment.</span>
+          </li>
+          <li>
+            <img src="resources/light-bulb.png" alt="Innovation Icon" />
+            <span>Engineering progress through research, insight, and creativity.</span>
+          </li>
+        </ul>
+    </section>
+
+    <section id="value" class="value-section">
+        <h2>Value Proposition</h2>
+        <div class="value-container">
+          <div class="value-image">
+            <img src="resources/meeting.jpg" alt="pexels-fauxels-3184287">
+          </div>
+          <div class="value-content">
+            <ul>
+              <li>
+                <strong>End-to-End Project Excellence</strong><br />
+                ✓ From strategy to execution — delivering high-impact infrastructure and digital solutions with precision.
+              </li>
+              <li>
+                <strong>Innovation-Led Approach</strong><br />
+                ✓ We embed smart technology and forward-thinking methodologies into every phase of delivery.
+              </li>
+              <li>
+                <strong>Client-Centric Collaboration</strong><br />
+                ✓ Transparent, responsive, and deeply invested in long-term client success.
+              </li>
+              <li>
+                <strong>Expertise Across Sectors</strong><br />
+                ✓ Proven track record across construction, infrastructure, and digital transformation.
+              </li>
+              <li>
+                <strong>Sustainable & Scalable Solutions</strong><br />
+                ✓ Balancing performance and environmental impact through adaptive, future-proof design.
+              </li>
+              <li>
+                <strong>On Time. On Budget. On Vision.</strong><br />
+                ✓ Reliable delivery, rigorous standards, and results that align with your goals.
+              </li>
+            </ul>
+          </div>
+        </div>
+    </section>      
+
+    <section id="work">
+        <h2>Case Study</h2>
+        <div class="work-content">
+          <div class="work-text">
+            <p>
+              Take a guided tour through some of our most accomplished projects, showcasing the depth of our approach—from big-picture planning to on-site precision and digital integration.
+            </p>
+          </div>
+          <div class="work-video">
+            <a href="https://vimeo.com/showcase/11524616" target="_blank" class="video-thumbnail">
+              <img src="resources/screenshot.PNG" alt="Our Work Video" />
+              <div class="play-icon">&#9658;</div>
+            </a>
+          </div>          
+        </div>
+    </section>
+
+    <section id="recognitions">
+        <h2>Testimonials</h2>
+        <ul class="recognition-list">
+            <li class="ribbon-item">
+                <span class="star">★</span>
+                <span class="ribbon-text">
+                  Advanced BIM & XR Technologies – immersive 4D/5D/7D BIM, VR/AR/MR, flythroughs
+                </span>
+            </li>
+            <li class="ribbon-item">
+                <span class="star">★</span>
+                <span class="ribbon-text">
+                    National & Global Reach – delivered across Australia (VIC, QLD, WA, NSW) + international offices in Vietnam and Mauritius
+                </span>
+            </li>
+            <li class="ribbon-item">
+                <span class="star">★</span>
+                <span class="ribbon-text">
+                    Multidisciplinary Expertise – integrated planning and digital teams serving AEC industry clients
+                </span>
+            </li>
+        </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-overlay">
+      <h2>Let’s bring your vision to life</h2>
+      <div class="contact-info">
+        <p>
+          📞 <a href="tel:1800333539">1800 333 539</a> 
+          <span class="hours"> | Mon–Fri, 8:30 AM – 6:00 PM</span>
+        </p>
+        <p>
+          📧 <a href="mailto:contact@feeldx.com.au">contact@feeldx.com.au</a>
+        </p>
+      </div>
+    </div>
+  </footer>  
+
+  <script src="script.js" defer></script>
+</body>
+</html>
