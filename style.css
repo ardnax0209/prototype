@@ -32,6 +32,12 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         padding: 1rem 2rem;
     }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem; /* Space between icon and logo */
+    }
   
   header img {
     width: 300px;
@@ -78,19 +84,21 @@
     border: none;
     cursor: pointer;
   }
-  
-  #sidebar {
+
+#sidebar {
     display: none;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     height: 100vh;
-    width: 250px;
+    width: 250px; /* Default width */
     background-color: #6c7651;
     padding: 2rem 1rem;
     z-index: 1000;
     transition: transform 0.3s ease-in-out;
-  }
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
   
   #sidebar.open {
     display: block;
@@ -194,48 +202,38 @@
     background-color: #F9F9F7;
   }
 
-  .services-list {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap;
-    gap: 2rem;
-    border-left: 1px solid #ccc; /* For separating bullets */
-    border-right: 1px solid #ccc;
-  }
-  
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  gap: 2rem;
+  max-width: 100%;
+}
+
   .services-list li {
-    flex: 1 1 20%;
-    text-align: center;
-    position: relative;
-    padding: 0 1rem;
+      flex: 1 1 200px; /* Allows items to shrink and grow */
+      max-width: 250px;
+      text-align: center;
+      padding: 1rem;
+      box-sizing: border-box;
   }
-  
-  .services-list li:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 25%;
-    height: 50%;
-    width: 1px;
-    background-color: #ccc;
-  }
-  
+
   .services-list li img {
-    width: 60px;
-    height: auto;
-    margin-bottom: 1rem;
+      width: 60px;
+      height: auto;
+      margin-bottom: 1rem;
   }
-  
-  .services-list li span {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #333;
-  }
+
+    .services-list li span {
+        display: block;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+    }
 
   .value-container {
     display: flex;
@@ -325,34 +323,40 @@
   .work-video {
     flex: 1 1 50%;
   }
-  
-  .video-thumbnail {
+
+.video-thumbnail {
     position: relative;
-    display: inline-block;
+    display: block;
     cursor: pointer;
+    width: 100%;
     max-width: 100%;
+    aspect-ratio: 16 / 9;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease;
-  }
-  
-  .video-thumbnail img {
-    width: 100%;
-    display: block;
-  }
-  
-  .play-icon {
+}
+
+   .video-thumbnail img {
+     width: 100%;
+     display: block;
+     height: 100%;
+     object-fit: cover;
+   }
+
+.play-icon {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 4rem;
+    font-size: clamp(40px, 8vw, 80px);
     color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     background-color: rgba(0, 0, 0, 0.5);
     padding: 0.5rem 1rem;
     border-radius: 50%;
     transition: background-color 0.3s ease;
-  }
+    pointer-events: none; /* So click still goes to the <a> */
+}
   
   .video-thumbnail:hover .play-icon {
     background-color: rgba(0, 0, 0, 0.7);
@@ -476,7 +480,13 @@
   }
   
   /* Mobile Responsiveness */
-  @media (max-width: 768px) {
+@media (max-width: 400px) {
+    #sidebar {
+        width: 100vw;
+    }
+}
+
+  @media (max-width: 1707px) {
     nav ul {
       flex-direction: column;
       gap: 0.5rem;
@@ -553,20 +563,6 @@
     .cta-button {
         font-size: 16px;
         padding: 0.6rem 1.2rem;
-    }
-
-    .services-list {
-        flex-direction: column;
-        border: none;
-    }
-    
-    .services-list li {
-        padding: 1rem 0;
-        border-bottom: 1px solid #ddd;
-    }
-    
-    .services-list li:not(:last-child)::after {
-        display: none;
     }
 
     .work-content {
